@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework #65 Output</title>
+</head>
+<body>
+<h3>Задание №1</h3>
+<script>
+    const list = ['молоко', 'пиво', 'пиво', 'молоко', 'молоко'];
+    for (let i = 0; i < list.length; i++) {
+        if (list[i] === 'молоко') {
+            document.write('хорошо<br>');
+        }
+        else {
+            document.write('плохо<br>');
+        }
+    }
+</script>
+
+<h3>Задание №2</h3>
+<script>
+    function average(list) {
+        let sum = 0;
+        for (let i = 0; i < list.length; i++) {
+            sum += list[i];
+        }
+        return sum / list.length;
+    }
+
+    let first = average([1, 5, 12, 4, 3]);
+    let second = average([2, 3, 4, 5, 6, 7, 8, 9, 10]);
+    let third = average([3, 10, 17]);
+
+    document.write(first + '<br>');
+    document.write(second + '<br>');
+    document.write(third + '<br>');
+</script>
+
+<h3>Задание №3</h3>
+<button type="submit" id="task3">Запустить</button>
+<script>
+    const button = document.getElementById('task3');
+
+    function main() {
+        let answer = prompt('У квадратного стола отпилили один угол. Сколько теперь углов у него стало?')
+        switch (answer.toLowerCase()) {
+            case '5':
+            case 'пять':
+                alert('Ответ верный')
+                break;
+            default:
+                alert('Ответ неверный') 
+        }
+    }
+
+    button.addEventListener('click', main);
+</script>
+
+<h3>Задание №4</h3>
+<script>
+    let duck = {
+    name: "Дональд",
+    color: "белый",
+    age: "1",
+    toStr: function() {
+      return `${this.name}, ${this.color}, ${this.age} год`;
+    },
+    say: function() {
+      return "кря кря";
+    }
+  };
+  
+    document.write(duck.toStr() + '<br>');
+    document.write(duck.say());
+</script>
+</body>
+</html>
